@@ -6,14 +6,26 @@
  */
 
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { Text } from 'react'
 
-import messages from './messages';
+import spongebobSad from 'images/spongebob-sad.jpg'
 
 export default function NotFound() {
   return (
-    <h1>
-      <FormattedMessage {...messages.header} />
-    </h1>
+    <div className="container" style={{
+        backgroundColor: '#05284e',
+        height: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+      }}
+    >
+      <img src={spongebobSad} alt="Not Found" />
+      <br />
+      <div style={{ color: 'white', fontFamily: 'tahoma' }}>
+        Oops! Not Found!
+      </div>
+    </div>
   );
 }
